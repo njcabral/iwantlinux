@@ -13,6 +13,7 @@ import os
 import shutil
 import time
 import ctypes
+import wmi
 import subprocess
 import re
 from PySide6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, 
@@ -569,7 +570,6 @@ class Page3_USB(QWidget):
         pass
 
     def scan_drives(self):
-        import wmi
         self.drive_combo.clear()
         self.drives_map = [] # List of dicts
         
@@ -620,7 +620,6 @@ class Page3_USB(QWidget):
 
 class Page4_Instructions(QWidget):
     def __init__(self):
-        import wmi
         super().__init__()
         layout = QVBoxLayout(self)
         layout.setAlignment(Qt.AlignCenter)
