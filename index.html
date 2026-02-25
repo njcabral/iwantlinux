@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script type="text/javascript">
-  (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window, document, "clarity", "script", "vlllmxzqlm");
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IWantLinux — Your First Step to Linux</title>
@@ -746,9 +739,61 @@
     <a href="https://github.com/njcabral/iwantlinux">GitHub</a>
     <a href="https://github.com/njcabral/iwantlinux/releases/latest/download/IWantLinux.exe">Download</a>
     <a href="https://github.com/njcabral/iwantlinux/issues">Report a Bug</a>
+    <a href="https://iwantlinux.com/privacy.html">Privacy Policy</a>
   </div>
   <span class="footer-copy">© 2026 Nathanael Cabral · Licensed under GPL-3</span>
 </footer>
+<div id="cookie-banner" style="display:none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--ink); color: var(--white); padding: 20px 40px; z-index: 9999; box-shadow: 0 -4px 20px rgba(0,0,0,0.15); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; font-family: 'Nunito', sans-serif;">
+  <p style="margin: 0; font-size: 0.95rem; line-height: 1.5; flex: 1 1 300px; font-weight: 300;">
+    We use cookies via Microsoft Clarity to analyze website traffic, generate heatmaps, and improve your experience. By clicking "Accept", you consent to our use of these cookies. <a href="privacy.html" style="color: var(--sky); text-decoration: underline;">Read our Privacy Policy</a>.
+  </p>
+  <div style="display: flex; gap: 12px; flex-shrink: 0;">
+    <button id="decline-cookies" style="background: transparent; border: 2px solid rgba(255,255,255,0.5); padding: 10px 24px; border-radius: 50px; color: var(--white); font-family: 'Nunito', sans-serif; font-weight: 700; cursor: pointer; transition: background 0.2s;">Decline</button>
+    <button id="accept-cookies" style="background: var(--sky); border: none; padding: 12px 28px; border-radius: 50px; color: var(--ink); font-family: 'Nunito', sans-serif; font-weight: 800; cursor: pointer; transition: transform 0.2s;">Accept</button>
+  </div>
+</div>
 
+<script>
+  // Function to load MS Clarity ONLY after consent
+  function loadClarity() {
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "vlllmxzqlm");
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const declineBtn = document.getElementById('decline-cookies');
+
+    // Check localStorage for past consent
+    const consent = localStorage.getItem('cookieConsent');
+    
+    if (!consent) {
+      // Show banner if no choice was made
+      banner.style.display = 'flex';
+    } else if (consent === 'accepted') {
+      // Load script silently if previously accepted
+      banner.style.display = 'none';
+      loadClarity();
+    } else {
+      // Keep hidden and don't load script if declined
+      banner.style.display = 'none';
+    }
+
+    acceptBtn.addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'accepted');
+      banner.style.display = 'none';
+      loadClarity();
+    });
+
+    declineBtn.addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'declined');
+      banner.style.display = 'none';
+    });
+  });
+</script>
 </body>
 </html>
