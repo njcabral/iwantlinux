@@ -12,12 +12,6 @@ Supported distros:
 
 ---
 
-## ⚠️ Beta Notice
-
-IWantLinux is currently in early/beta release (version 2026.02.20). It appears stable based on testing, but you may encounter issues. Please [open an issue](https://github.com/njcabral/iwantlinux/issues) if you do.
-
----
-
 ## Requirements
 
 - Windows 10 (build 1809 or higher) or Windows 11
@@ -67,7 +61,7 @@ python IWL.py
 
 IWantLinux uses date-based version numbers in the format `YYYY.MM.DD`, corresponding to the date each release was built.
 
-Current version: **2026.02.20**
+Current version: **2026.04.23**
 
 ---
 
