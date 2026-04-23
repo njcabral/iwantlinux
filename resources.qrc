@@ -1,0 +1,5 @@
+<RCC>
+	<qresource prefix="/">
+		<file>Nunito-VariableFont_wght.ttf</file>
+	</qresource>
+</RCC>
