@@ -61,7 +61,7 @@ python IWL.py
 
 IWantLinux uses date-based version numbers in the format `YYYY.MM.DD`, corresponding to the date each release was built.
 
-Current version: **2026.04.23**
+Current version: **2026.07.22**
 
 ---
 
