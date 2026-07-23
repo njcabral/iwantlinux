@@ -2,10 +2,10 @@
 
 
 a = Analysis(
-    ['IWL.py'],
+    ['Z:\\IWL.py'],
     pathex=[],
     binaries=[],
-    datas=[('IWLIcon.ico', '.')],
+    datas=[('Z:\\IWLIcon.ico', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -35,7 +35,7 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    version='IWL_info.txt',
+    version='Z:\\IWL_info.txt',
     uac_admin=True,
-    icon=['IWLIcon.ico'],
+    icon=['Z:\\IWLIcon.ico'],
 )

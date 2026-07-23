@@ -31,12 +31,12 @@ VSVersionInfo(
         '040904B0',
         [StringStruct('CompanyName', 'Nathanael Cabral'),
         StringStruct('FileDescription', 'IWantLinux'),
-        StringStruct('FileVersion', '2026.04.23.0'),
+        StringStruct('FileVersion', '2026.07.22.0'),
         StringStruct('InternalName', 'IWantLinux'),
         StringStruct('LegalCopyright', '© 2026 Nathanael Cabral. Licensed under GPL-3.'),
         StringStruct('OriginalFilename', 'IWANTLINUX.EXE'),
         StringStruct('ProductName', 'IWantLinux'),
-        StringStruct('ProductVersion', '2026.04.23.0')])
+        StringStruct('ProductVersion', '2026.07.22.0')])
       ]), 
     VarFileInfo([VarStruct('Translation', [1033, 1200])])
   ]
