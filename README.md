@@ -6,7 +6,7 @@ Supported distros:
 - Linux Mint
 - Ubuntu
 - Zorin OS
-- Pop!_OS
+- Aurora
 
 🌐 [iwantlinux.com](https://iwantlinux.com) &nbsp;|&nbsp; 📦 [Latest Release](https://github.com/njcabral/iwantlinux/releases/latest)
 
