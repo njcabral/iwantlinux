@@ -46,7 +46,7 @@ If you'd prefer to compile IWantLinux yourself:
 **Install dependencies:**
 
 ```bash
-pip install PySide6 requests wmi pywin32
+pip install -r requirements.txt
 ```
 
 **Run the app:**
